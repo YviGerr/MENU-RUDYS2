@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rudy's Kafee | Menú Digital</title>
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -448,7 +448,7 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 RUDY'S KAFEE.</p>
+        <p>&copy; 2026 RUDY'S KAFEE. Todos los derechos reservados.</p>
     </footer>
 
     <script>
@@ -460,7 +460,7 @@
             mainNav.classList.toggle('active');
         });
 
-        // Lógica de las pestañas (Comida / Bebidas)
+        // Lógica de las pestañas (Comida / Bebidas) y CAMBIO DE TEMA
         function openTab(evt, tabName) {
             let tabContents = document.getElementsByClassName("tab-content");
             for (let i = 0; i < tabContents.length; i++) {
@@ -474,6 +474,13 @@
 
             document.getElementById(tabName).classList.add("active");
             evt.currentTarget.classList.add("active");
+
+            // --- MAGIA: CAMBIO DE TEMA VISUAL ---
+            if (tabName === 'bebidas') {
+                document.body.classList.add('theme-bebidas');
+            } else {
+                document.body.classList.remove('theme-bebidas');
+            }
         }
     </script>
 </body>
